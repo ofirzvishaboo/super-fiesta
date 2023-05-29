@@ -69,6 +69,7 @@ while True:
 print("Bye!")
 
 
+
 ##while True:
     ##todo = input(user_prompt)
     ##print(todo.capitalize()) caps first letter in first word
@@ -76,5 +77,5 @@ print("Bye!")
     ##dir(type[]) to check methoods
     ##import builtins
     ## 'show' | 'display'
-
+    ##ss
 

@@ -77,5 +77,5 @@ print("Bye!")
     ##dir(type[]) to check methoods
     ##import builtins
     ## 'show' | 'display'
-    ##ss
+    ## uploading at ease
 

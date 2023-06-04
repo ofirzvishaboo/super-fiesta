@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../bonus"
+		}
+	],
+	"settings": {
+		"git.autorefresh": true,
+		"git.enabled": true
+	}
+}

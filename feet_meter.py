@@ -1,5 +1,9 @@
 import PySimpleGUI as sg
-from mybonus import convert
+
+def convert(feet, inches):
+    meters = feet * 0.3048 + inches * 0.0254
+    return meters
+
 
 sg.theme("Black")
 
@@ -13,10 +17,10 @@ button = sg.Button("Convert")
 output_label = sg.Text("", key="output")
 exit_button = sg.Button("Exit")
 
-window = sg.Window("Meter converter",
-layout=[[feet_label, feet_input],
-[inches_label, inches_input],
- [button, output_label, exit_button]])
+window = sg.Window("Convertor",
+                   layout=[[feet_label, feet_input],
+                           [inches_label, inches_input],
+                           [button, exit_button, output_label]])
 
 while True:
     event, values = window.read()
@@ -25,11 +29,13 @@ while True:
             break
         case sg.WIN_CLOSED:
             break
-    feet = float(values["feet"])
-    inches = float(values["inches"])
-
-    result = convert(feet, inches)
-    window["output"].update(value=f"{result} m", text_color="white")
+    try:
+        feet = float(values["feet"])
+        inches = float(values["inches"])
+        result = convert(feet, inches)
+        window["output"].update(value=f"{result} m", text_color="white")
+    except ValueError:
+        sg.popup("Please provide two numbers.", font=("Helvetica", 20))
 
 
 window.close()

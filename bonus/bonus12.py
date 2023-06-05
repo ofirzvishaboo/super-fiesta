@@ -1,4 +1,4 @@
-import bonus.mybonus as mybonus
+import mybonus as mybonus
 
 
 feet_inches = input("Enter feet and inches: ")

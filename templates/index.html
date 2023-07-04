@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>This is the best webapp!</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+
+</head>
+<h1>This is my route page! </h1>
+
+<body>
+
+<div>
+    <p>Please Enter your name:</p>
+    <form class="pure-form" method="POST" action="/">
+        Name: <br>
+        <input type="text" name="username"><br>
+        Favorite food:<br>
+        <input type="text" name="food"><br>
+        <button type="submit" class="pure-buttom pure-buttom-primary" value="Submit">Submit</button>
+        <button type="like" class="pure-buttom pure-buttom-primary" value="Submit">Submit</button>
+    </form>
+
+</div>
+<br>
+<div>
+    {% if name %}
+    <p>Welcome {{ name }}</p>
+    <p>Your favorite food is  {{ food }}</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
